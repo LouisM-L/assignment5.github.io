@@ -1,0 +1,214 @@
+/* === CSS variables === */
+
+:root {
+    --header-txt-color: #4881c9;
+    --header-background: white;
+    --main-heading: #fff;
+    --card-txt-color: rgb(73, 73, 73);
+    --card-background: white;
+    --btn-background: #898ccd;
+    --btn-color: white;
+    --btn-hover-color: #377ec8;
+    --form-background: #f98e9b;
+}
+
+/* === Global Styling === */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(140, 140, 205);
+    background: linear-gradient( 135deg, rgba(140, 140, 205, 1) 0%, rgba(52, 126, 200, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* === header === */
+
+header {
+    background: var(--header-background);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-box {
+    display: flex;
+    align-items: center;
+    color: var(--header-txt-color);
+}
+
+.right-box i {
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+    color: var(--header-txt-color);
+}
+
+.right-box a i {
+    padding-right: 1rem;
+}
+
+.right-box button {
+    color: inherit;
+    background-color: var(--header-background);
+    border: none;
+    cursor: pointer;
+}
+
+.right-box a {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+#login {
+    display: flex;
+    align-items: center;
+    padding-right: 0.5rem;
+    margin-left: 2rem;
+    font-weight: 700;
+}
+
+/* === Main === */
+
+main {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 800px;
+}
+
+/* === Overall cards === */
+
+.card {
+    margin: 2rem 0;
+    background: var(--card-background);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card:first-child {
+    margin-top: 0;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+/* === Card Text === */
+
+.text p {
+    color: var(--card-txt-color);
+}
+
+.text>* {
+    margin-bottom: 0.75em;
+}
+
+.text> :last-child {
+    margin-bottom: 0;
+}
+
+/* === Buttons === */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card button {
+    display: none;
+    margin-left: 0.75em;
+}
+
+/* === Form === */
+
+#form-section {
+    background-color: #f98e9b;
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+form {
+    max-width: 800px;
+    padding: 0 1rem 1rem 1rem;
+    display: flex;
+    flex-direction: column; 
+    margin: 0 auto;
+    gap: 0.5em;
+}
+
+#form-container {
+    display: flex;
+    gap: 0.5em;
+}
+
+#title { flex: 3; }
+
+#price { 
+    flex: 1;
+    min-width: 120px;
+ }
+
+textarea {
+    padding: 0.5em;
+}
+
+#text-add {
+    display: flex;
+    gap: 0.5em;
+}
+textarea{ flex: 1; }
+
+
+/* === Utility Classes ==== */
+
+.heading {
+    padding: 0.5em 0 0.3em;
+    color: var(--main-heading);
+    text-align: center;
+}
+
+.btn {
+    font-size: 1.25rem;
+    background: var(--btn-background);
+    padding: 0.35em 0.75em;
+    color: var(--btn-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--btn-hover-color);
+}
+
+/* === Media Queries === */
+
+@media only screen and (max-width: 520px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-box {
+        margin-top: 1.5rem;
+    }
+}
