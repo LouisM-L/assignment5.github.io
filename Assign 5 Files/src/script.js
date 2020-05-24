@@ -15,10 +15,15 @@ function login()
    }
 }
 
-function NewMeal()
+function FormSection()
 {
-    if(loggedin === true)
+    if(loggedin = true)
     {
         
     }
+}
+
+function NewMeal()
+{
+    
 }
